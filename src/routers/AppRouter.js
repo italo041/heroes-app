@@ -12,10 +12,10 @@ export const AppRouter = () => {
   const { user: { logged } } = useContext(AuthContext);
 
   return (
-    <Router >
+    <Router basename={process.env.PUBLIC_URL} >
       <div>  
         <Switch> 
-            <PublicRoute  ba
+            <PublicRoute  
               exact path="/login" 
               component={ LoginScreen } 
               isAuthenticated={ logged }
